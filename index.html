@@ -1,92 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SQL Festland</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="bg-black bg-body-secondary vh-100 center-grid">
-    <div class="container h-75 bg-body-tertiary rounded-2 p-3">
-      <div class="row h-100">
-        <!-- left container -->
-        <div class="col-8">
-          <!-- history container -->
-          <div class="row-10 overflow-auto auto-height" id="history">
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-              A simple success alert—check it out!
-            </div>
-            <div class="alert alert-danger" role="alert">
-              A simple danger alert—check it out!
-            </div>
-            <div class="alert alert-danger" role="alert">
-              A simple danger alert—check it out!
-            </div>
-          </div>
-
-          <!-- input container -->
-          <div class="row-2 h-auto">
-            <!-- input -->
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="SQL Request"
-                aria-label="SQL Request"
-                aria-describedby="submitSql"
-                id="inputSql"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="submitSql"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- right container -->
-        <div class="col-4">
-          <div class="card">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Terminal with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fixed-bottom">
+        <div class="card terminal-window color">
             <div class="card-body">
-              <h5 class="card-title" id="cardTitle">Name</h5>
-              <p class="card-text" id="cardBody">Message</p>
-              <a href="#" class="btn btn-primary" id="cardBtn">Ok</a>
+                <div class="output" id="sql-output"></div>
+                <div class="input">
+                    <textarea id="sql-input" class="form-control" placeholder="Enter SQL code here..."></textarea>
+                    <button class="btn btn-success mt-3" onclick="executeSQL()">Execute</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    
+    <script src="script.js"></script>
+</body>
 </html>
